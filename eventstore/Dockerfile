@@ -11,4 +11,4 @@ EXPOSE 1113
 VOLUME /data/db
 VOLUME /data/logs
 
-CMD cd /opt/EventStore-OSS-Linux-v3.0.0; ./run-node.sh --ext-tcp-port=1113 --int-tcp-port=1112 --ext-http-port=2113 --int-http-port=2112 --db /data/db --log /data/logs --int-ip=0.0.0.0 --ext-ip=0.0.0.0
+CMD cd /opt/EventStore-OSS-Linux-v3.0.0; ./run-node.sh --ext-tcp-port=1113 --db /data/db --log /data/logs --ext-http-port=2113 --http-prefixes=http://*:2113/ --ext-ip=0.0.0.0
